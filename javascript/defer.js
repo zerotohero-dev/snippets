@@ -7,3 +7,5 @@ function defer(fn) {
         timer = setTimeout(fn, 400);
     }
 }
+
+// TODO: add some variations; like on utilizes RAF etc.
