@@ -1,0 +1,12 @@
+# Put this to sites-available, and symlink to sites-enabled.
+# ln -s EXISTING_FILE SYMLINK_FILE
+# ln -s /etc/nginx/sites-available/sitename.conf /etc/nginx/sites-enabled/sitename.conf
+
+server {
+    listen      80 default_server; # you can replace it with another hostname too
+    listen [::]:80 default_server; # "                                          "
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+    }
+}
